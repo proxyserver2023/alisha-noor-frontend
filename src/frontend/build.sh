@@ -1,9 +1,0 @@
-#!/bin/bash
-
-set -x
-DOCKER_HUB_USERNAME="${DOCKER_HUB_USERNAME:-imalamin}"
-REPO_NAME="${REPO_NAME:-frontend}"
-VERSION_NAME="${VERSION_NAME:-latest}"
-
-docker build -t $DOCKER_HUB_USERNAME/$REPO_NAME:$VERSION_NAME .
-docker push $DOCKER_HUB_USERNAME/$REPO_NAME:$VERSION_NAME
