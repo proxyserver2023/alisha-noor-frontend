@@ -14,13 +14,6 @@ export const cartClient = axios.create({
   },
 });
 
-export const checkoutClient = axios.create({
-  baseURL: process.env.CHECKOUT_BASE_URL || "http://localhost:5003/api",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-
 export const getProducts = () => productClient.get("/products");
 export const getProductById = (id) => productClient.get(`/products/${id}`);
 export const getCart = () => cartClient.get("/cart");
